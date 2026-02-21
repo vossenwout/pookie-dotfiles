@@ -22,7 +22,7 @@ brew install stow
 ```bash
 git clone https://github.com/vossenwout/pookie-dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow nvim
+stow neovim
 stow tmux
 stow ghostty
 ```
