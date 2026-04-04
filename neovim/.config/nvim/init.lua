@@ -14,6 +14,9 @@ vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 -- Raise dialog if you close unsaved buffer (prevent mistakes)
 vim.o.confirm = true
 
+-- Snappy escape
+vim.o.ttimeoutlen = 1
+
 -- Vim diagnostics
 vim.diagnostic.config({
   severity_sort = true, -- show most severe error first
@@ -29,7 +32,25 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Highlight yanks 
-vim.api.nvim_create_autocmd("TextYankPost", {
-  group = vim.api.nvim_create_augroup("highlight-yank", {clear = true}),
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('highlight-yank', {clear = true}),
   callback = function() vim.highlight.on_yank() end,
 })
+
+-- Plugins
+vim.pack.add({
+  'https://github.com/ibhagwan/fzf-lua',
+})
+
+-- FzfLua Setup
+require('fzf-lua').setup({
+ keymap = {
+   builtin = {
+      ["<C-d>"]  = "preview-page-down",
+      ["<C-u>"]  = "preview-page-up",
+   },
+ },
+})
+
+vim.keymap.set('n', '<leader><leader>', '<cmd>FzfLua files<cr>', { desc = 'Find files'})
+vim.keymap.set('n', '<leader>/', '<cmd>FzfLua live_grep<cr>', { desc = 'Find live grep'})

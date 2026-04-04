@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "fzf-lua": {
+      "rev": "abacb0693d7a37de9e85e6fcb2d22d848cb75cef",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    }
+  }
+}
