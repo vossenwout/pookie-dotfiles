@@ -114,7 +114,6 @@ require('kanagawa').setup({
 })
 -- vim.cmd('colorscheme kanagawa-wave')
 -- Guts Colorscheme
-vim.opt.runtimepath:append('/Users/woutvossen/Documents/programming/guts.nvim')
 vim.cmd.colorscheme("guts")
 
 -- Rose pine Colorscheme
@@ -343,6 +342,14 @@ require("codediff").setup({})
 vim.keymap.set('n', '<leader>ru', '<cmd>CodeDiff<cr>', { desc = 'Code diff not staged' })
 vim.keymap.set('n', '<leader>rm', '<cmd>CodeDiff main<cr>', { desc = 'Code diff main' })
 vim.keymap.set('n', '<leader>rh', '<cmd>CodeDiff HEAD~1<cr>', { desc = 'Code diff previous commit' })
+vim.api.nvim_create_autocmd("User", {
+	pattern = "CodeDiffOpen",
+	callback = function()
+		for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+			vim.wo[win].cursorline = false
+		end
+	end,
+})
 
 -- Start screen
 local alpha = require('alpha')
