@@ -283,6 +283,15 @@ vim.keymap.set('n', '<leader>dq', dap.terminate, { desc = 'Debug terminate' })
 vim.keymap.set('n', '<leader>dr', function()
 	dap.repl.open({ height = 12 }, 'belowright split')
 end, { desc = 'Debug open REPL' })
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = 'dap-repl',
+	callback = function(ev)
+		vim.keymap.set('i', '<C-p>', function() require('dap.repl').on_up() end,
+			{ buffer = ev.buf, desc = 'DAP REPL previous history' })
+		vim.keymap.set('i', '<C-n>', function() require('dap.repl').on_down() end,
+			{ buffer = ev.buf, desc = 'DAP REPL next history' })
+	end,
+})
 vim.keymap.set('n', '<leader>dl', dap.run_last, { desc = 'Debug run last' })
 vim.keymap.set({ 'n', 'v' }, '<leader>dh', require('dap.ui.widgets').hover, { desc = 'Debug hover' })
 vim.keymap.set('n', '<Down>', dap.step_over, { desc = 'Debug step over' })
