@@ -94,12 +94,9 @@ vim.pack.add({
 	-- Colorschemes
 	'https://github.com/rebelot/kanagawa.nvim',
 	{ src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
-	'https://github.com/vague-theme/vague.nvim',
 	'https://github.com/vossenwout/guts.nvim',
 })
 
--- Vague Colorscheme
-vim.pack.add({ 'https://github.com/vague-theme/vague.nvim' })
 -- Kanagawa Colorscheme
 require('kanagawa').setup({
 	colors = {
@@ -118,7 +115,7 @@ vim.cmd.colorscheme("guts")
 
 -- Rose pine Colorscheme
 require("rose-pine").setup()
---vim.cmd.colorscheme("rose-pine")
+-- vim.cmd.colorscheme("rose-pine-dawn")
 
 -- Markdown
 require('render-markdown').setup({})
@@ -283,7 +280,9 @@ dap.configurations.python = { -- https://github.com/microsoft/debugpy/wiki/Debug
 vim.keymap.set('n', '<leader>b', dap.toggle_breakpoint, { desc = 'Debug toggle breakpoint' })
 vim.keymap.set('n', '<leader>dc', dap.continue, { desc = 'Debug continue' })
 vim.keymap.set('n', '<leader>dq', dap.terminate, { desc = 'Debug terminate' })
-vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'Debug open REPL' })
+vim.keymap.set('n', '<leader>dr', function()
+	dap.repl.open({ height = 12 }, 'belowright split')
+end, { desc = 'Debug open REPL' })
 vim.keymap.set('n', '<leader>dl', dap.run_last, { desc = 'Debug run last' })
 vim.keymap.set({ 'n', 'v' }, '<leader>dh', require('dap.ui.widgets').hover, { desc = 'Debug hover' })
 vim.keymap.set('n', '<Down>', dap.step_over, { desc = 'Debug step over' })

@@ -18,7 +18,7 @@
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "guts.nvim": {
-      "rev": "a4fc46c5c5ca545e2e06b48d19c7e216c778fb8b",
+      "rev": "4377fdf450bca2bfd571191b6dc6ae8e24faff77",
       "src": "https://github.com/vossenwout/guts.nvim"
     },
     "kanagawa.nvim": {
@@ -56,10 +56,6 @@
     "rose-pine": {
       "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
       "src": "https://github.com/rose-pine/neovim"
-    },
-    "vague.nvim": {
-      "rev": "fd58046b9d64259d9785e4aeb6d6f494c6943cad",
-      "src": "https://github.com/vague-theme/vague.nvim"
     }
   }
 }
