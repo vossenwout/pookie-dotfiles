@@ -176,7 +176,8 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.lsp.enable({
 	'ty',            -- also $ uv tool install ty@latest
 	'ruff',          -- also $ uv tool install ruff@latest
-	'lua_ls'         -- also $ brew install lua-language-server
+	'lua_ls',        -- also $ brew install lua-language-server
+	'clangd'         -- also $ brew install llvm
 })
 vim.o.signcolumn = 'yes' -- make lsp warnings not widen the gutter
 -- Auto-format ("lint") on save (adapted from neovim docs :help auto-format)
