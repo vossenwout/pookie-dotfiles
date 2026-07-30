@@ -114,8 +114,8 @@ require('kanagawa').setup({
 vim.cmd.colorscheme("guts")
 
 -- Rose pine Colorscheme
-require("rose-pine").setup()
--- vim.cmd.colorscheme("rose-pine-dawn")
+--require("rose-pine").setup()
+--vim.cmd.colorscheme("rose-pine-dawn")
 
 -- Markdown
 require('render-markdown').setup({})
@@ -173,11 +173,21 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- LSP
+vim.lsp.config('rust_analyzer', {
+	settings = {
+		['rust-analyzer'] = {
+			check = {
+				command = 'clippy',
+			},
+		},
+	},
+})
 vim.lsp.enable({
 	'ty',            -- also $ uv tool install ty@latest
 	'ruff',          -- also $ uv tool install ruff@latest
 	'lua_ls',        -- also $ brew install lua-language-server
-	'clangd'         -- also $ brew install llvm
+	'clangd',        -- also $ brew install llvm
+	'rust_analyzer', -- also $ rustup component add rust-analyzer clippy rustfmt
 })
 vim.o.signcolumn = 'yes' -- make lsp warnings not widen the gutter
 -- Auto-format ("lint") on save (adapted from neovim docs :help auto-format)
