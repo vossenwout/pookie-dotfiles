@@ -1,11 +1,19 @@
 {
-  "lastChangelogVersion": "0.79.0",
+  "lastChangelogVersion": "1.0.2",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-6.1-sol",
   "defaultThinkingLevel": "low",
   "editorPaddingX": 1,
   "quietStartup": true,
   "theme": "guts",
   "autocompleteMaxVisible": 10,
-  "hideThinkingBlock": false
+  "hideThinkingBlock": false,
+  "modelThinkingLevels": {
+    "openai-codex/gpt-6-astra": "low"
+  },
+  "enabledModels": [
+    "openai-codex/gpt-6-astra",
+    "openai-codex/gpt-6.1-sol"
+  ],
+  "tuiMode": "regular"
 }
