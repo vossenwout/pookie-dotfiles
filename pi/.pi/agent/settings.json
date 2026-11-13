@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.0.2",
+  "lastChangelogVersion": "1.5.2",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6.1-sol",
   "defaultThinkingLevel": "low",
@@ -12,7 +12,6 @@
     "openai-codex/gpt-6-astra": "low"
   },
   "enabledModels": [
-    "openai-codex/gpt-6-astra",
     "openai-codex/gpt-6.1-sol"
   ],
   "tuiMode": "regular"

@@ -124,13 +124,14 @@ require('render-markdown').setup({})
 local fzf = require('fzf-lua')
 fzf.setup({
 	fzf_colors = false,
-	grep = {
+	grep = { -- also $ brew install ripgrep
 		rg_opts = table.concat({
 			"--column --line-number --no-heading --color=always --smart-case --max-columns=4096",
 			"--colors 'path:none'",
 			"--colors 'line:none'",
 			"--colors 'column:none'",
 			"--colors 'match:fg:225,255,229'",
+			"--glob '!uv.lock'",
 			"-e",
 		}, " "),
 	},
