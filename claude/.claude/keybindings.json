@@ -1,0 +1,56 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-keybindings.json",
+  "$docs": "https://code.claude.com/docs/en/keybindings",
+  "bindings": [
+    {
+      "context": "Global",
+      "bindings": {
+        "ctrl+t": null
+      }
+    },
+    {
+      "context": "Chat",
+      "bindings": {
+        "ctrl+p": "chat:modelPicker",
+        "ctrl+e": "command:effort"
+      }
+    },
+    {
+      "context": "Select",
+      "bindings": {
+        "ctrl+j": "select:next",
+        "ctrl+k": "select:previous",
+        "ctrl+l": "select:accept"
+      }
+    },
+    {
+      "context": "Autocomplete",
+      "bindings": {
+        "ctrl+j": "autocomplete:next",
+        "ctrl+k": "autocomplete:previous",
+        "ctrl+l": "autocomplete:accept"
+      }
+    },
+    {
+      "context": "Confirmation",
+      "bindings": {
+        "ctrl+j": "confirm:next",
+        "ctrl+k": "confirm:previous",
+        "ctrl+l": "confirm:yes"
+      }
+    },
+    {
+      "context": "EffortSlider",
+      "bindings": {
+        "ctrl+j": "effortSlider:decreaseEffort",
+        "ctrl+k": "effortSlider:increaseEffort"
+      }
+    },
+    {
+      "context": "Settings",
+      "bindings": {
+        "ctrl+l": "select:accept"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "enabledPlugins": {},
+  "sandbox": {
+    "enabled": false
+  },
+  "effortLevel": "xhigh",
+  "tui": "default",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark-ansi",
+  "editorMode": "normal",
+  "autoCompactEnabled": true,
+  "autoScrollEnabled": true,
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  }
+}

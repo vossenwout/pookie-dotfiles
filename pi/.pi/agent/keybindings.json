@@ -3,7 +3,7 @@
   "tui.select.down": ["down", "ctrl+j"],
   "tui.select.confirm": ["enter", "ctrl+l"],
   "tui.select.cancel": ["ctrl+c", "escape", "ctrl+h"],
-  "app.thinking.cycle": ["ctrl+t"],
+  "app.thinking.cycle": ["ctrl+e"],
   "app.model.cycleForward": [""],
   "app.model.cycleBackward": [""],
   "app.model.select": ["ctrl+p"],

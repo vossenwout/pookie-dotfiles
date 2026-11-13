@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal configuration files for neovim, tmux, ghostty, pi and zsh. Managed with [GNU Stow](https://www.gnu.org/software/stow/).
+My personal configuration files for neovim, tmux, ghostty, pi, Claude Code and zsh. Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Structure
 
@@ -9,8 +9,9 @@ dotfiles/
 ├── neovim/.config/nvim/
 ├── tmux/.tmux.conf
 ├── ghostty/.config/ghostty/config
-└── zshrc/.zshrc
-└── pi/.pi/agent/
+├── zshrc/.zshrc
+├── pi/.pi/agent/
+└── claude/.claude/
 ```
 
 ## Requirements
@@ -29,6 +30,7 @@ stow tmux
 stow ghostty
 stow zshrc
 stow pi
+stow claude
 ```
 
 This creates symlinks from the expected config locations to the files in this repo.
